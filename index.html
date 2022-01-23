@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="style2.css">
+
+    </link>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Mila rijschool</title>
+
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="hero-img-container">
+
+            <img src="foto23.png" alt="text" />
+        </div>
+        <div class="bel">
+
+            <div class="belons">
+                <p style="color: black;">Bel ons:</p>
+                <p style="color: #009fd9;">+31683578</p>
+
+            </div>
+
+
+            <p style="color: #009fd9;"><a herf="">Bel me terug</a></p>
+
+            <i class="fa fa-envelope" style="font-size:24px"></i>
+            <i class="fa fa-facebook-f" style="font-size:24px"></i>
+
+        </div>
+    </div>
+
+    <header>
+        <div class="slideshow-container">
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Opleidingen
+                
+              </button>
+                    <div class="dropdown-content">
+
+                        <a href="rijles.html">Rijles 50 plus</a>
+                        <a href="snel.html">Snelcursus</a>
+                        <a href="slag.html">Slaaggarantie</a>
+                    </div>
+                </div>
+                <a href="tarieven.html">Tarieven</a>
+                <a href="overons.html">Over ons</a>
+
+            </div>
+
+
+
+
+            <div class="mySlides fade">
+
+                <img src="foto20.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="foto12.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="foto30.jpg" style="width:100%">
+                <div class="text"> <button herf="#">gratis proefles inplenen</button></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <script>
+            function testme() {
+                var aantal = document.getElementById("ezfc_element-2-child").value
+
+                if (aantal == "") {
+                    alert("aantal lessen is verplicht!")
+                }
+
+            }
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+        <div class="text1">
+            <h2>Kwaliteit, doelgericht en lage tarieven!</h2>
+            <p>Rijschool Mila is een rijschool in Someren en omstreken die zich inzet voor een professionele individuele begeleiding en je krijgt les volgens de aller modernste methodes.</p>
+            </br>
+            <p>Bovendien is EigenTempo gespecialiseerd in diverse vormen van verkeersangst, faalangst, rijangst en examenvrees. Door een goed onderling contact, een intensieve begeleiding, een goede sfeer en 100% aandacht voor jou, wordt jouw rijopleiding
+                ongetwijfeld een succes. Bovendien zijn wij heel flexibel in lestijden en betaalwijze dus alles gaat op jouw tempo.</p>
+        </div>
+
+    </header>
+
+    <div class="items">
+        <div class="item1">
+            <img style="height: auto;
+            max-width: 100%;" src="foto66.png">
+            <h3 style="font-weight: 600;">slaaggarantie</h3>
+        </div>
+        <div class="item2">
+            <img style="height: auto;
+            max-width: 100%;" src="foto77.png">
+            <h3 style="font-weight: 600;">Goedkoop</h3>
+        </div>
+        <div class="item3">
+            <img style="height: auto;
+            max-width: 100%;" src="foto88.png">
+            <h3 style="font-weight: 600;">Gespreid betalen</h3>
+        </div>
+    </div>
+
+    <h1 style="text-align: center; margin: 10vh 0 3vh 0;">Ons aanbod</h1>
+
+    <div class="items">
+        <div id="col4">
+            <a class="btn" href="">2todrive</a>
+        </div>
+        <div id="col4">
+            <a class="btn" href="">Spoedcursus</a>
+        </div>
+        <div id="col4">
+            <a class="btn" href="">Slaaggarantie</a>
+        </div>
+        <div id="col4">
+            <a class="btn" href="">Prive rijles</a></br>
+
+        </div>
+
+    </div>
+    <div class="klik">
+        <a class="link" style="float: right; width: 100%; margin-top: 2vh; cursor: pointer;margin-top: 2vh;" href="">Klik voor meer</a></div>
+    <h1 style="text-align: center; margin: 10vh 0 5vh 0;">Benieuwd hoeveel jouw rijbewijs kost?</h1>
+
+    <div class="col15">
+        <div class="col2" style="float:left;">
+            <p style="text-align: justify;margin-bottom: 1.5em;">
+                Rijschool Mila, de goedkoopste rijschool van Someren en omstreken, kijk zelf maar even.</p>
+            <form class="ezf" style="float:left;">
+                <input type="hidden" name="id" value="1">
+                <input type="hidden" name="ref_id" value="61d8400f6a3c4">
+
+
+                <label class="ezfc-label" for="ezfc_element-2-child">Aantal lessen <span class="ezfc-required-char" 
+                    style="color: red;">*</span></label></br>
+                <input class="form_input ezfc-slider ezfc-element ezfc-element-numbers ui-draggable ui-draggable-handle" data-factor="35" id="ezfc_element-2-child" name="ezfc_element[2]" placeholder="Stuur" type="text" value="1" required="" data-min="1" data-max="50"
+                    data-initvalue="1" data-stepsslider="1"><br><br>
+
+
+
+                <label for="fname">Nummer<span class="ezfc-required-char" style="color: red;">*</span></label><br>
+                <input class="form_input type=" text " id="fname " name="fname "><br><br>
+                <label for="lname ">Email<span class="ezfc-required-char " style="color: red; ">*</span></label><br>
+                <input class="form_input type="text" id="lname" name="lname"><br><br>
+                <label class='ezfc-label'><span style="color: red;">*</span> Verplicht</label></br>
+
+                <input type="button" value="Ontvang prijs" onclick="testme();" data-element='submit'>
+            </form>
+        </div>
+
+
+
+
+
+
+        <div class="proefles " style="padding:2vh;background: #009fd9;float: right; ">
+            <div style="clear:both;width:100%;min-height:50px; ">
+                <h4 style="float:left;margin: 1vh auto 1.5vh auto;color:#FFF;line-height:normal; "><b>Vraag hier een gratis proefles aan!</b></h4><br>
+                <h6 style="float:left;margin: 0.1vh auto 0.1vh auto;color:#FFF;line-height:normal; "><b>-	Gratis bij afname lespakket, anders € 20,-</b></h6><br>
+                <h6 style="float:left;margin: 0.1vh auto 0.1vh auto;color:#FFF;line-height:normal; "><b>-	Je wordt thuis opgehaald!</b></h6><br>
+                <h6 style="float:left;margin: 0.1vh auto 0.1vh auto;color:#FFF;line-height:normal; "><b>-	Gegarandeerd kwalitatieve rijlessen</b></h6>
+            </div>
+
+            <div style="clear:both;width:100%;min-height:50px;float:right ; ">
+                <p style="float:left;margin: 0.5vh 0 0.2vh 0;color:#FFF; ">Uw Naam</p><br>
+                <p><span class="wpcf7-form-control-wrap your-name "><input type="text " name="your-name " value=" " size="40 " class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required " aria-required="true " aria-invalid="false
+                    " placeholder="Naam " /></span> </p>
+                <p style="float:left;margin: 0 0 0.2vh 0;color:#FFF; ">Waar bent u op te bereiken?</p><br>
+                <p style="margin-bottom:0.5em !important; ">
+                    <span class="wpcf7-form-control-wrap your-email "><input type="email " name="your-email " value=" " size="40 " class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email
+                    " aria-required="true " aria-invalid="false " placeholder="E-mail " /></span></p>
+                <p>
+                    <span class="wpcf7-form-control-wrap text-184 "><input type="text " name="text-184 " value=" " size="40 " class="wpcf7-form-control wpcf7-text " aria-invalid="false " placeholder="Telefoon " /></span> </p><br>
+                <p><input type="submit" value="Verzenden" class="wpcf7-form-control wpcf7-submit" /></p>
+            </div>
+        </div>
+    </div>
+
+    </form>
+    </div>
+    <br>
+    <br>
+
+
+
+
+    <footer>
+        <div id="col3" class="col3m">
+
+            <h4 class="h1footer ">Ons locatie</h4>
+            <p>Bosselerstraat 10</p>
+            <p>5711 Someren</p>
+            <p style="margin-top:1vh; ">KvK: 65657280</p>
+            <p>BTW nummer: NL002478517B56</p>
+        </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
