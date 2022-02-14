@@ -8,9 +8,10 @@
     </link>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="smile-alert.css" />
+    <script src="smile-alert.js"></script>
     <title>Mila rijschool</title>
-
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
 
 </head>
 
@@ -92,11 +93,43 @@
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
         <script>
-            function testme() {
+            function bedanken() {
+                var naam = document.getElementById("proefnaam").value
+
+                var options = {
+                    confirm: true,
+                    confirmText: 'oke',
+                }
+                msg = "<b>" + naam + "</b>! Bedankt voor de aanvraag <br>We gaan zo snel mogelijk met u contact opnemen."
+                alert("Bedankt", msg, options)
+
+            }
+
+            function validate() {
                 var aantal = document.getElementById("ezfc_element-2-child").value
+                var nummer = document.getElementById("fname").value
+                var email = document.getElementById("lname").value
+
+                var msg = ""
 
                 if (aantal == "") {
-                    alert("aantal lessen is verplicht!")
+                    msg += "aantal lessen is verplicht!<br>"
+                }
+                if (nummer == "") {
+                    msg += "nummer is verplicht!<br>"
+                }
+                if (email == "") {
+                    msg += "email is verplicht!"
+                }
+
+                var options = {
+                    confirm: true,
+                    confirmText: 'oke',
+                }
+
+
+                if (msg != "") {
+                    alert("Opps...", msg, options);
                 }
 
             }
@@ -164,22 +197,22 @@
 
     <div class="items">
         <div id="col4">
-            <a class="btn" href="">2todrive</a>
+            <a class="btn" href="overons.html">2todrive</a>
         </div>
         <div id="col4">
-            <a class="btn" href="">Spoedcursus</a>
+            <a class="btn" href="snel.html">Spoedcursus</a>
         </div>
         <div id="col4">
-            <a class="btn" href="">Slaaggarantie</a>
+            <a class="btn" href="slag.html">Slaaggarantie</a>
         </div>
         <div id="col4">
-            <a class="btn" href="">Prive rijles</a></br>
+            <a class="btn" href="tarieven.html">Prive rijles</a></br>
 
         </div>
 
     </div>
     <div class="klik">
-        <a class="link" style="float: right; width: 100%; margin-top: 2vh; cursor: pointer;margin-top: 2vh;" href="">Klik voor meer</a></div>
+        <a class="link" style="float: right; width: 100%; margin-top: 2vh; cursor: pointer;margin-top: 2vh;margin-right: 70px;" href="">Klik voor meer</a></div>
     <h1 style="text-align: center; margin: 10vh 0 5vh 0;">Benieuwd hoeveel jouw rijbewijs kost?</h1>
 
     <div class="col15">
@@ -199,12 +232,12 @@
 
 
                 <label for="fname">Nummer<span class="ezfc-required-char" style="color: red;">*</span></label><br>
-                <input class="form_input type=" text " id="fname " name="fname "><br><br>
-                <label for="lname ">Email<span class="ezfc-required-char " style="color: red; ">*</span></label><br>
-                <input class="form_input type="text" id="lname" name="lname"><br><br>
+                <input class="form_input" type="text" id="fname" name="fname"><br><br>
+                <label for="lname ">Email<span class="ezfc-required-char" style="color: red; ">*</span></label><br>
+                <input class="form_input" type="text" id="lname" name="lname"><br><br>
                 <label class='ezfc-label'><span style="color: red;">*</span> Verplicht</label></br>
 
-                <input type="button" value="Ontvang prijs" onclick="testme();" data-element='submit'>
+                <input type="button" value="Ontvang prijs " onclick="validate(); " data-element='submit'>
             </form>
         </div>
 
@@ -223,15 +256,14 @@
 
             <div style="clear:both;width:100%;min-height:50px;float:right ; ">
                 <p style="float:left;margin: 0.5vh 0 0.2vh 0;color:#FFF; ">Uw Naam</p><br>
-                <p><span class="wpcf7-form-control-wrap your-name "><input type="text " name="your-name " value=" " size="40 " class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required " aria-required="true " aria-invalid="false
-                    " placeholder="Naam " /></span> </p>
+                <p><span class="wpcf7-form-control-wrap your-name "><input type="text" id="proefnaam" name="your-name " value=" " size="40 " class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required " aria-required="true" aria-invalid="false" placeholder="Naam " /></span>                    </p>
                 <p style="float:left;margin: 0 0 0.2vh 0;color:#FFF; ">Waar bent u op te bereiken?</p><br>
                 <p style="margin-bottom:0.5em !important; ">
                     <span class="wpcf7-form-control-wrap your-email "><input type="email " name="your-email " value=" " size="40 " class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email
                     " aria-required="true " aria-invalid="false " placeholder="E-mail " /></span></p>
                 <p>
                     <span class="wpcf7-form-control-wrap text-184 "><input type="text " name="text-184 " value=" " size="40 " class="wpcf7-form-control wpcf7-text " aria-invalid="false " placeholder="Telefoon " /></span> </p><br>
-                <p><input type="submit" value="Verzenden" class="wpcf7-form-control wpcf7-submit" /></p>
+                <p><input type="submit" value="Verzenden" class="wpcf7-form-control wpcf7-submit" onclick="bedanken();" /></p>
             </div>
         </div>
     </div>
