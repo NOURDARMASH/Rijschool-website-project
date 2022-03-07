@@ -3,27 +3,472 @@
     padding: 0;
 }
 
-@media screen and (max-width:1024px) {
-    CSS FOR Max WIDTH 1024Px
+* {
+    box-sizing: border-box;
 }
 
+.footer {
+    max-width: 1300px !important;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+    .col-s-2 {
+        width: 16.66%;
+    }
+    .col-s-3 {
+        width: 25%;
+    }
+    .col-s-4 {
+        width: 33.33%;
+    }
+    .col-s-5 {
+        width: 41.66%;
+    }
+    .col-s-6 {
+        width: 50%;
+    }
+    .col-s-7 {
+        width: 58.33%;
+    }
+    .col-s-8 {
+        width: 66.66%;
+    }
+    .col-s-9 {
+        width: 75%;
+    }
+    .col-s-10 {
+        width: 83.33%;
+    }
+    .col-s-11 {
+        width: 91.66%;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 555px) {
+    .footer {
+        display: block !important;
+    }
+    .colcont {
+        display: block !important;
+        width: 80% !important;
+        margin: 0 10% !important;
+    }
+    .col3l {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .col3r,
+    .col3m {
+        width: 100% !important;
+        margin: 4vh 0 0 0 !important;
+    }
+    .col3lchild {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        justify-content: center !important;
+    }
+}
+
+@media (min-width: 555px) and (max-width: 900px) {
+    .footer {
+        display: block !important;
+    }
+    .colcont {
+        width: 80% !important;
+        margin: 0 10% !important;
+    }
+    .col3r {
+        width: 100% !important;
+        margin: 4vh 0 0 0 !important;
+    }
+    .col3l {
+        width: 50% !important;
+        margin: 0 !important;
+    }
+    .col3m {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 740px) {
+    h1 {
+        font-size: 25px !important;
+    }
+    #col4 h3,
+    #col3 h3 {
+        word-wrap: normal !important;
+        font-size: 10px !important;
+    }
+    p {
+        font-size: 1em !important;
+    }
+    .btnmain2 {
+        border: 1px solid #009fd9 !important;
+        font-weight: 700 !important;
+    }
+    .metaslider .caption-wrap {
+        top: 10% !important;
+        width: 50vw !important;
+        margin-left: 25vw !important;
+    }
+    .caption-wrap .btnmain {
+        font-size: 2vmin !important;
+        padding: 0vmin !important;
+        margin-top: 2vh !important;
+        font-weight: 500 !important;
+    }
+    .caption-wrap .txtmain {
+        font-size: 3vmin !important;
+    }
+    .txtoverons,
+    .txttarieven,
+    .txtopleidingen {
+        font-size: 2.5vmin !important;
+        width: 40vw !important;
+    }
+    .col2left,
+    .col2right,
+    .col3,
+    .col75,
+    .col2,
+    .col60 {
+        width: 100% !important;
+        min-height: 50px !important;
+        margin-bottom: 4vmin !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .site-content {
+        margin-top: 5px !important;
+    }
+    .entry-content {
+        margin-top: 1vh !important;
+    }
+    .site-footer-bottom-bar #col3 p {
+        font-size: 15px !important;
+    }
+    .branding a img {
+        width: 250px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 741px) and (max-width: 991px) {
+    p {
+        font-size: 1.2em !important;
+    }
+    .metaslider .caption-wrap {
+        width: 30vw !important;
+        margin-left: 35vw !important;
+    }
+    .caption-wrap .btnmain {
+        font-size: 1.5vmin !important;
+        padding: 1vmin !important;
+        margin-top: 3vh !important;
+    }
+    .caption-wrap .txtmain {
+        font-size: 2vmin !important;
+    }
+    .txtoverons,
+    .txttarieven,
+    .txtopleidingen {
+        font-size: 2vmin !important;
+        margin-top: 8% !important;
+        width: 30vw !important;
+    }
+    .col2left,
+    .col2right,
+    .col3,
+    .col75,
+    .col2,
+    .col60,
+    .col15 {
+        width: 100% !important;
+        min-height: 50px !important;
+        margin-bottom: 4vmin !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block;
+    }
+    .proefles {
+        text-align: center !important;
+        display: blok;
+    }
+    .content img {
+        width: 300px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1040px) {
+    p {
+        font-size: 1.2em !important;
+    }
+    .metaslider .caption-wrap {
+        width: 30vw !important;
+        margin-left: 35vw !important;
+    }
+    .caption-wrap .txtmain,
+    .txtoverons {
+        font-size: 2vmin !important;
+    }
+    .txttarieven,
+    .txtoverons,
+    .txtopleidingen {
+        width: 30vw !important;
+    }
+    .content img {
+        width: 300px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 1040px) and (max-width: 1400px) {
+    p {
+        font-size: 1.2em !important;
+    }
+    .metaslider .caption-wrap {
+        width: 30vw !important;
+        margin-left: 35vw !important;
+    }
+    .caption-wrap .txtmain {
+        font-size: 2.5vmin !important;
+    }
+    .txtoverons,
+    .txttarieven,
+    .txtopleidingen {
+        font-size: 2.5vmin !important;
+        width: 30vw !important;
+    }
+    .content img {
+        width: 350px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .metaslider .caption-wrap {
+        width: 30vw !important;
+        margin-left: 35vw !important;
+    }
+    p {
+        font-size: 1.2em !important;
+    }
+    .content img {
+        width: 400px !important;
+        height: auto !important;
+    }
+}
+
+
+/*@media screen and (max-width:1024px) {
+CSS FOR Max WIDTH 1024Px
+}
 @media screen and (max-width:768px) {
     CSS FOR Max WIDTH 768Px
 }
-
 @media screen and (max-width:640px) {
     CSS FOR Max WIDTH 640Px
 }
-
 @media screen and (max-width:480px) {
     CSS FOR Max WIDTH 480Px
 }
-
 @media screen and (max-width:320px) {
     CSS FOR Max WIDTH 320Px
+}*/
+
+
+/* For mobile phones: */
+
+
+/*[class*="col-"] {
+    width: 100%;
 }
 
-body {
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+
+/*.col-s-1 {
+    width: 8.33%;
+}
+
+.col-s-2 {
+    width: 16.66%;
+}
+
+.col-s-3 {
+    width: 25%;
+}
+
+.col-s-4 {
+    width: 33.33%;
+}
+
+.col-s-5 {
+    width: 41.66%;
+}
+
+.col-s-6 {
+    width: 50%;
+}
+
+.col-s-7 {
+    width: 58.33%;
+}
+
+.col-s-8 {
+    width: 66.66%;
+}
+
+.col-s-9 {
+    width: 75%;
+}
+
+.col-s-10 {
+    width: 83.33%;
+}
+
+.col-s-11 {
+    width: 91.66%;
+}
+
+.col-s-12 {
+    width: 100%;
+}
+
+
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+
+/*.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+}
+*/
+
+
+/*[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+*/
+
+* body {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -571,9 +1016,6 @@ h1 {
     width: 100%;
     float: left;
 }
-
-@CHARSET "UTF-8";
-.smile-alert {}
 
 .smile-alert-mask {
     position: fixed;
