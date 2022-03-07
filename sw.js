@@ -16,6 +16,7 @@ self.addEventListener('install', event => {
     );
 });
 
+
 self.addEventListener("activate", (activating) => {
     console.log("Service Worker: All systems online, ready to go!");
 });
